@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="script.js"></script>
+<body>
+
+    <script>
+        
+      function Da () {
+          this.newArr = [];
+          this.regEv = function (e, fun){
+            this.newArr.push({event: e, func: fun});
+          };
+
+          this.trigger = function(str){
+            var a = _.where(this.newArr, {event: str});
+            a[1].func();
+          };
+
+          this.delEv = function(str){
+                  for(var i = 0; i < this.newArr.length; i++){
+                    console.log(this.newArr[i].event);
+                	if(this.newArr[i].event === str){
+                  delete this.newArr[i];
+
+                }
+
+            }
+
+          };
+ this.show = function() {
+                console.log(this.newArr);
+            }
+      };
+
+      var obj = new Da();
+
+      obj.regEv("click", function(){ alert("Hello"); });
+      obj.regEv("click", function(){ alert("Hello World!"); });
+      obj.trigger("click");
+      obj.show();
+      console.log(obj.delEv("click"));
+       obj.show();
+      </script>
+
+      </body>
+
+</html>

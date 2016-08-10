@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		function str(a) {
+			var n = 0;
+			var k = 0;
+			var c = '';
+			for (var i = 0; i < a.length; i++) {
+				if (a[i].toUpperCase() == a[i]) {
+					n++;
+				} else {
+					k++;
+				}
+			}
+			if (n > k) {
+				return a.toUpperCase();
+			} else {
+				return a.toLowerCase();
+			}
+		}
+		var c = str("sSSSStrDiDFDlng");
+		console.log(c);
+	</script>
+</body>
+
+</html>

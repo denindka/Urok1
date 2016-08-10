@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calc">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <script src="./../bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-controller="CalculatorCtrl as calc">
+    Первое значение:
+    <input type="number" ng-model="calc.first">
+    <br> Второе значение:
+    <input type="number" ng-model="calc.second">
+    <br>
+    <button ng-click="calc.plus()">+</button>
+    <button ng-click="calc.minus()">-</button>
+    <button ng-click="calc.del()">/</button>
+    <button ng-click="calc.multiply()">*</button>
+    <p>Result: {{calc.result}}</p>
+</body>
+
+</html>

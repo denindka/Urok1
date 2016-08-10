@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		function CamelCase(str) {
+			var string = "";
+			for (var i = 0; i < str.length; i++) {
+				if (str[i].toUpperCase() == str[i]) {
+					string += ' ' + str[i];
+				} else {
+					string += str[i];
+				}
+			}
+			return string.toLowerCase();
+		};
+
+		var a = CamelCase("vediCtotoTam");
+		console.log(a);
+	</script>
+</body>
+
+</html>

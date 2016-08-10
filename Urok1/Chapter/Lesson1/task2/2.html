@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		function reverseStr(str) {
+			var string = '';
+			for (var i = str.length - 1; i >= 0; i--) {
+				string += str[i];
+			}
+			return string;
+		}
+
+		var a = reverseStr('Привет мир! ');
+		var b = reverseStr('3.14');
+		console.log(a, b);
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    dddd
+    <div id="my">
+
+    </div>
+    <div id="rez">
+
+    </div>
+    <script>
+
+    var A = {
+         Author: "Vasya",
+          Title: "Title",
+           Text: "ctoto tam"
+       };
+          var Update = {
+            Author: "...........",
+            Title: "..................",
+            Text: "............",
+            EntryId: "EntryId_2a889de0-2e1b-4529-908a-a3c8adfb19da"
+        };
+
+        var Del = {
+          Author: "Kolea",
+          Title: "..................",
+          Text: "kole dsdsds",
+          EntryId: "EntryId_2a889de0-2e1b-4529-908a-a3c8adfb19da"
+      };
+        function get(url, success, error) {
+            var a = new XMLHttpRequest();
+            a.open('GET', url, true);
+            a.send();
+            a.onreadystatechange = function() {
+                if (this.readyState === 4) {
+                    if (this.status === 200) {
+                        success(a.response);
+                    } else {
+                        error();
+                    }
+                }
+                // a.onreadystatechange();
+            }
+        }
+        var success = function(a) {
+
+            var elem = document.getElementById('my');
+            elem.innerHTML = a;
+
+        }
+        var error = function() {
+            alert("error");
+        } //end get
+
+        function post(url, success, error) {
+
+            var b = new XMLHttpRequest();
+            var obj = JSON.stringify(A);
+
+            b.open('POST', 'http://localhost:3333/entry', true);
+            b.setRequestHeader("Content-type", "application/json");
+            b.send(obj);
+
+            b.onreadystatechange = function() {
+
+                if (this.readyState === 4) {
+
+                    if (this.status === 200) {
+                        success(b.response);
+                    } else {
+                        error();
+                    }
+                }
+            }
+        }
+        var success_1 = function() {
+            var doc = document.getElementById("rez")
+            doc.innerHTML = 'Объект отправлены';
+
+        };
+        var error_1 = function() {
+            alert("error")
+        };
+        function put(url, success, error) {
+            var c = new XMLHttpRequest();
+            var obj_1 = JSON.stringify(Update);
+            c.open('PUT', 'http://localhost:3333/entry', true);
+            c.setRequestHeader("Content-type", "application/json");
+            c.send(obj_1);
+            c.onreadystatechange = function() {
+                if (this.readyState === 4) {
+                    if (this.status === 200) {
+                        success(c.response);
+                    } else {
+                        error();
+                    }
+                }
+           }
+        };
+        var success_2 = function(g) {
+            alert("ok")
+            var elem_3 = document.getElementById('rez');
+            elem_3.innerHTML = "Объект обновлены";
+        }
+        var error_2 = function() {
+            alert("error");
+        } //end put
+        function del(url, success, error) {
+            var d = new XMLHttpRequest();
+            var obj_2 = JSON.stringify(Del);
+            d.open('DELETE', 'http://localhost:3333/entry', true);
+            d.setRequestHeader("Content-type", "application/json");
+            d.send(obj_2);
+            d.onreadystatechange = function() {
+                if (this.readyState === 4) {
+                    if (this.status === 200) {
+                        success(d.response);
+                    } else {
+                        error();
+                    }
+                }
+           }
+        };
+        var success_3 = function(g) {
+            alert("ok")
+            var elem_4 = document.getElementById('rez');
+            elem_4.innerHTML = "Объект удален";
+        }
+        var error_3 = function() {
+            alert("error");
+        } //end put
+    </script>
+    <button type="button" name="button" onclick="get('http://localhost:3333/entry', success, error )">Get</button>
+    <button type="button" name="button" onclick="post('http://localhost:3333/entry', success_1, error_1)">Post</button>
+    <button type="button" name="button" onclick="put('http://localhost:3333/entry', success_2, error_2)">Put</button>
+    <button type="button" name="button" onclick="del('http://localhost:3333/entry', success_3, error_3)">Delete</button>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+var newArr = ['ABc', 'ABcd', 'Abcd'];
+	function str(a) {
+		var n = 0;
+		var k = 0;
+		for (var i = 0; i < a.length; i++) {
+			if (a[i].toUpperCase() == a[i]) {
+				n++;
+			} else {
+				k++;
+			}
+		}
+		if (n > k) {
+			return a.toUpperCase();
+		} else {
+			return a.toLowerCase();
+		}
+	}
+	        function arrIndex(arr) {
+	            var exm = [];
+	            var b;
+	            arr.forEach(function(item,i) {
+	            b = str(item);
+	            exm.push(b);
+	  	            })
+	            return exm;
+	        }
+					console.log(arrIndex(newArr));
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <script src="./../bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-controller="TaskCtrl as task">
+    <div class="container">
+        <input type="text" ng-model="task.obj.name">
+        <button ng-click="task.someFunc()">fgfg</button>
+        <br>
+        <select name="" ng-model="chan" ng-init="chan='list'">
+            <option value="list">list</option>
+            <option value="table">table</option>
+        </select>
+
+        <div ng-switch on="chan">
+            <div class="block a" ng-repeat="item in task.array" ng-switch-when="table">
+                <div class="check">
+                    <input type="checkbox" ng-model="item.done"><span>Check</span>
+                    <br>
+                </div>
+                <h2 ng-class="{'cl': item.done == true}">{{ item.name }}</h2>
+                <button ng-click="task.deleteFunc($index)">delete</button>
+            </div>
+
+
+            <div class="block" ng-repeat="item in task.array" ng-switch-when="list">
+                <div class="check">
+                    <input type="checkbox" ng-model="item.done"><span>Check</span>
+                    <br>
+                </div>
+                <h2 ng-class="{'cl': item.done == true}">{{ item.name }}</h2>
+                <button ng-click="task.deleteFunc($index)">delete</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

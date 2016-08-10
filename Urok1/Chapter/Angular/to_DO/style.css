@@ -1,0 +1,22 @@
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+.block {
+  border: 2px solid black;
+  width: 100%;
+  margin: 0 auto;
+}
+h2{
+  text-align: center;
+}
+.check{
+  float: right;
+}
+.cl {
+  text-decoration: line-through;
+}
+.a{
+  background-color: green;
+  color:red;
+}

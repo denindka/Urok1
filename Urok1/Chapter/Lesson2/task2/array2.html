@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		function roundNumber(a) {
+			var b = [];
+			for (var i = 0; i <= a.length - 1; i++) {
+				b.push(Math.round(a[i]));
+			}
+			return b;
+		}
+		var out = roundNumber([1, 2.3, 0.1, -1]);
+		console.log(out);
+	</script>
+</body>
+
+</html>

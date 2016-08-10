@@ -1,0 +1,42 @@
+button {
+  padding: 5px 15px;
+  font-size: 3em;
+}
+div.d{
+  background:  #FFE4C4;
+  font-size: 43px;
+  border: 2px solid green;
+  margin: 10px;
+  width: 50%;
+  margin: 0 auto;
+}
+button.chan{
+  margin-left: 27%;
+
+}
+.add{
+  background-color: #81F7D8;
+  margin-left: 27%;
+}
+
+form {
+  width: 40%;
+  position: absolute;
+  top:20%;
+  left: 30%;
+  background: #81F7D8;
+  font-size: 24px;
+
+}
+form label {
+  margin-left: 70px;
+}
+form input{
+  margin: 10px;
+  display: block;
+  margin: 0 auto;
+  height: 20px;
+}
+.ok{
+  background: grey;
+}

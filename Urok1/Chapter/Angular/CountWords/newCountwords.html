@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <script src="./../bower_components/angular/angular.js"></script>
+    <script src="newCountwordsCTRL.js"></script>
+</head>
+
+<body ng-controller="CountCtrl as count">
+    <textarea rows="10" cols="45" name="text" maxlength="100" ng-model="count.a" ng-change="count.someFunc()"></textarea>
+    <p> Letter: {{count.obj.letters}}</p>
+    <p> Words: {{count.obj.words}}</p>
+    <p> Whitespace: {{count.obj.whitespace}}</p>
+    <p>У вас осталось {{count.s}}</p>
+    <p style=" color:red; font-size='32px';">{{count.message}}</p>
+</body>
+
+</html>
