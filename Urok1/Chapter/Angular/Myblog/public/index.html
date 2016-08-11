@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="blog">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div ui-view></div>
+
+    <script src="libs/angular.js"></script>
+    <script src="libs/angular-ui-router.js"></script>
+
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/components/home/controllers/home.ctrl.js"></script>
+    <script src="app/components/blog/controllers/blog.ctrl.js"></script>
+    <script src="app/components/contacts/controllers/contacts.ctrl.js"></script>
+    <script src="app/components/main/controllers/main.ctrl.js"></script>
+</body>
+</html>

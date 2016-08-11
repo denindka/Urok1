@@ -1,0 +1,91 @@
+.content {
+    width: 92%;
+    margin: 0 auto;
+    border: 2px solid #00CC99;
+}
+.sidebar {
+    width: 90%;
+    margin: 0 auto;
+    background: #00CC99;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+}
+ul {
+    width: 25%;
+    margin: 0 auto;
+}
+a {
+    background: #339966;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    margin-left: 3px;
+}
+a:hover {
+    background-color: #FFFF33;
+    color: black;
+}
+li {
+    list-style: none;
+    display: inline-block;
+}
+.main {
+    margin: 0 auto;
+    width: 20%;
+    font-family: Calibri;
+    color: #339966;
+    text-decoration: underline;
+}
+img {
+    max-width: 100%;
+}
+button {
+    padding: 10px 90px;
+}
+textarea {
+  margin-left: 4%;
+
+}
+input {
+  width: 46%;
+  margin-left: 0;
+  margin-bottom: 25px;
+}
+.block {
+  width: 50%;
+  margin: 0 auto;
+}
+.btn {
+  margin-left: 15%;
+}
+.input {
+  margin-top: 20px;
+  width: 50%;
+
+  margin: 0 auto;
+}
+.head {
+  background: grey;
+  border: 2px solid black;
+  margin-top: 20px;
+  width: 100%
+}
+.res {
+  background: white;
+}
+.btnCont {
+  margin-left: 4%;
+}
+.result {
+  margin-left: 3%;
+}
+.del {
+  padding: 3px;
+}
+.dell {
+  padding: 2px;
+  float: right;
+}

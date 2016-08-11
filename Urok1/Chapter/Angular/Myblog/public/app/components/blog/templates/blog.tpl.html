@@ -1,0 +1,17 @@
+<div class="block">
+    <label for="a">Заголовок: </label>
+    <input id="a" type="text" ng-model="blog.obj.title">
+    <br> Текст:
+    <textarea name="name" rows="8" cols="40" ng-model="blog.obj.text"></textarea>
+    <br>
+    <button class="btn" name="button" ng-click="blog.addAll()">Добавить</button>
+</div>
+<div class="input">
+    <div class="head" ng-repeat="Title in blog.array">Заголовок: {{Title.title}}
+      <button class="dell" ng-click="blog.deleteFunc($index)">x</button>
+        <div class="res" >Текст: {{Title.text}}
+        </div>
+    </div>
+
+
+</div>

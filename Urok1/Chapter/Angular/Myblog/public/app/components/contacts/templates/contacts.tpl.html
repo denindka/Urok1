@@ -1,0 +1,10 @@
+<div class="main">
+    <textarea name="name" rows="8" cols="28" ng-model="contacts.obj.name"></textarea>
+    <br>
+    <button class="btnCont" type="button" name="button" ng-click="contacts.addFunc()">Добавить</button>
+    <div class="result clearfix" ng-repeat="item in contacts.array">
+        <h2>Task: {{item.name}}<button class="del" ng-click="contacts.deleteFunc($index)">x
+        </button></h2>
+    </div>
+
+</div>
