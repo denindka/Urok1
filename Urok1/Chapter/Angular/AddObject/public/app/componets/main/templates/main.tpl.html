@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+    <div class="form-group col-md-12 col-lg-12 has-success" >
+        <form ng-class="myVar">
+            <input type="text" class="form-control" placeholder="Write something" ng-model="main.obj.title">
+            <button class="btn btn-info btn-lg btn-block" ng-click="main.addPost()">{{ main.nameBtn }}</button>
+            <button class="btn btn-info btn-lg btn-block" ng-click="main.changeData()">Post</button>
+        </form>
+        <h1 class="text-center text-warning" >{{ main.results }}</h1>
+        <div class="wrapper" ng-repeat="note in main.result track by $index">
+            <ul>
+                <li><span>{{ note.id }}:</span> <span>{{ note.title }}</span>
+                    <button class="btn btn-danger btn-sm" ng-click="main.deleteTopicsNote(note.id)">Delete</button>
+                    <button class="btn btn-warning btn-sm" ng-click="main.changeNotes(note.title, note.id)"><span>Change</span></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</div>

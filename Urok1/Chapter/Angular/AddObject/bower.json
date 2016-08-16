@@ -1,0 +1,22 @@
+{
+  "name": "Myblog",
+  "homepage": "https://github.com/denindka/25",
+  "authors": [
+    "Maslov Denis <denis.maslov.petru<@gmail.com>"
+  ],
+  "description": "\"Blog\"",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "router": "^1.0.6",
+    "express": "^4.14.0"
+  }
+}
