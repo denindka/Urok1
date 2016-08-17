@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row col-sm-3">
+        <div class="panel panel-danger col-sm-offset-2 col-sm-7">
+            <div class="panel-body">
+                <div>Cart</div>
+                <div ng-repeat="item in list.cart"><span class="bg-success">Title: {{ item.title }}</span> <span>Price: {{ item.price }}</span>
+
+                </div>
+                <div class="badge badge-red pull-right">{{ list.total }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-sm-9">
+        <div ng-repeat="product in list.products" class="panel panel-danger col-sm-8">
+            <div class="panel-body">
+                <button class="btn btn-danger pull-right" ng-click="list.deleteProduct($index, product.id)">X</button>
+                <div>
+                    <div class="row  col-sm-5">
+                        <div><img src="{{ product.image }}" alt=""></div>
+                        <div class="text-center">Price: {{ product.price }}</div>
+                    </div>
+                    <div class="row col-offset-2 col-sm-7">
+                        <div class="">Product Name: {{ product.title }}</div>
+                        <div>Description: {{ product.description }}</div>
+                    </div>
+                </div>
+                <button class="btn btn-success btnBottom pull-right" ng-click="list.addBasket(product.title, product.price)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
